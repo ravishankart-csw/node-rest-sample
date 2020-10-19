@@ -21,6 +21,7 @@ steps:
   displayName: 'npm install and build'
 - task: SnykSecurityScan@0
   inputs:
+    serviceConnectionEndpoint: 'Snyk'
     testType: 'app'
     monitorOnBuild: true
     failOnIssues: false
